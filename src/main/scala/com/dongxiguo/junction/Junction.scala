@@ -46,7 +46,7 @@ object Junction {
 
   private final val PathPrefix = """\??\"""
 
-  def mount(link:String, target:String) {
+  private[junction] def mount(link:String, target:String) {
     CreateFile(link,
                GENERIC_READ | GENERIC_WRITE,
                FILE_SHARE_DELETE,
