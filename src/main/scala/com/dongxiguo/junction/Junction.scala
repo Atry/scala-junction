@@ -20,6 +20,7 @@ import com.sun.jna._
 import platform.win32._
 import WinNT._
 import WinBase._
+import WinError._
 import Kernel32.INSTANCE._
 import java.io.File
 
@@ -108,7 +109,12 @@ object Junction {
                                0,
                                new ptr.IntByReference,
                                null)) {
-            throw new Win32Exception(GetLastError())
+            GetLastError() match {
+              case ERROR_INVALID_PARAMETER | ERROR_INVALID_FUNCTION =>
+                throw new UnsupportedOperationException
+              case errorCode =>
+                throw new Win32Exception(errorCode)
+            }
           }
         } finally {
           CloseHandle(handle)

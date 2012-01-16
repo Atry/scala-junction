@@ -42,7 +42,8 @@ object Junction {
       try {
         return Files.createSymbolicLink(link, target, attributes: _*)
       } catch {
-        case e: java.io.IOException =>
+        case e@ (_: java.io.IOException |
+                 _: UnsupportedOperationException) =>
           if (!Platform.isWindows) {
             throw e
           }
