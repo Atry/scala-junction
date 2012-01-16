@@ -33,7 +33,7 @@ object Junction {
  
   private final val FSCTL_SET_REPARSE_POINT = 0x000900a4
 
-  def createJunction(link:File, target:File) {
+  def createJunction(link: File, target: File) {
     if (!target.isAbsolute) {
       throw new IllegalArgumentException(
         "Junction must point to an absolute path.")
@@ -46,7 +46,7 @@ object Junction {
 
   private final val PathPrefix = """\??\"""
 
-  private[junction] def mount(link:String, target:String) {
+  private[junction] def mount(link: String, target: String) {
     CreateFile(link,
                GENERIC_READ | GENERIC_WRITE,
                FILE_SHARE_DELETE,
@@ -67,8 +67,8 @@ object Junction {
             SizeOfReparseDataHead + sizeOfMoutPointReparseBuffer
           val reparseData = new Memory(sizeOfReparseDataBuffer)
           val buffer = reparseData.getByteBuffer(0, sizeOfReparseDataBuffer)
-          val reserved:Short = 0
-          val substituteNameOffset:Short = 0
+          val reserved: Short = 0
+          val substituteNameOffset: Short = 0
           val substituteNameLength =
             java.lang.Character.SIZE / java.lang.Byte.SIZE *
             (PathPrefix.length + target.length)

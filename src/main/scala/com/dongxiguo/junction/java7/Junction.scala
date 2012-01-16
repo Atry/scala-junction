@@ -26,8 +26,8 @@ import com.sun.jna._
  * For Java 7
  */
 object Junction {
-  def createJunction(link:Path, target:Path,
-                     attributes:FileAttribute[_]*):Path = {
+  def createJunction(link: Path, target: Path,
+                     attributes: FileAttribute[_]*): Path = {
     if (!target.isAbsolute) {
       throw new IllegalArgumentException(
         "Junction must point to an absolute path.")
@@ -37,16 +37,16 @@ object Junction {
     return link
   }
 
-  def createSymbolicLinkOrJunction(link:Path, target:Path,
-                                   attributes:FileAttribute[_]*):Path = {
+  def createSymbolicLinkOrJunction(link: Path, target: Path,
+                                   attributes: FileAttribute[_]*): Path = {
       try {
-        return Files.createSymbolicLink(link, target, attributes:_*)
+        return Files.createSymbolicLink(link, target, attributes: _*)
       } catch {
         case e: java.io.IOException =>
           if (!Platform.isWindows) {
             throw e
           }
-          return createJunction(link, target, attributes:_*)
+          return createJunction(link, target, attributes: _*)
       }
   }
 
