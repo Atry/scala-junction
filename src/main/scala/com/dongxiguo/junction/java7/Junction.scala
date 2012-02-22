@@ -39,6 +39,7 @@ object Junction {
 
   /**
    * Creates a symbolic link. But if failed, create a junction point instead.
+   * Works on both POSIX and Windows.
    */
   def createSymbolicLinkOrJunction(link: Path, target: Path,
                                    attributes: FileAttribute[_]*): Path = {
