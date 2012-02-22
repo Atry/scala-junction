@@ -2,16 +2,19 @@
 # How to use it?
 If you use sbt, add following lines to you `build.sbt`:
 
-	resolvers += "scala-junction-repo" at "http://Atry.github.com/scala-junction/maven"
+	resolvers += "scala-junction-repo" at "http://atry.github.com/scala-junction/maven"
 	
 	libraryDependencies += "com.dongxiguo" %% "scala-junction" % "0.1-SNAPSHOT"
 
-Then you can create junction points by invoking some static functions:
+The [API](http://atry.github.com/scala-junction/maven/index.html) of `scala-junction` is quite simple. There is only three public static functions to create junctions:
 
 	com.dongxiguo.junction.Junction.createJunction(new java.io.File("my-link"), new java.io.File("D:\\target"));
 	
 	// Or if you are using Java 7:
 	com.dongxiguo.junction.java7.Junction.createJunction(java.nio.file.Path.get("my-link"), java.nio.file.Paths.get("D:\\target"));
+	
+	// If you want create junction only if failed to create a symblic link:
+	com.dongxiguo.junction.java7.Junction.createSymbolicLinkOrJunction(java.nio.file.Path.get("my-link"), java.nio.file.Paths.get("D:\\target"));
 
 # Why not symblic link? What's the difference between symblic links and junctions?
 Java 7 supports symblic link. But symblic link can only be created for elevated user on Windows Vista/7/2008. On the other hand, I tested `scala-junction` on Windows XP and Windows 7 (elevated user and non-elevated user), and worked for all of these platform. I guess `scala-junction` works on any Windows NT.
