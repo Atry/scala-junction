@@ -1,4 +1,4 @@
-`scala-junction` is an utility that create [NTFS junction points](https://en.wikipedia.org/wiki/NTFS_junction_point) on Windows for Scala or Java.
+`scala-junction` is an utility that creates [NTFS junction points](https://en.wikipedia.org/wiki/NTFS_junction_point) on Windows for Scala or Java.
 # How to use it?
 If you use sbt, add following lines to you `build.sbt`:
 
