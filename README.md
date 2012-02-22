@@ -13,7 +13,7 @@ Then you can create junction points by invoking some static functions:
 	// Or if you are using Java 7:
 	com.dongxiguo.junction.java7.Junction.createJunction(java.nio.file.Path.get("my-link"), java.nio.file.Paths.get("D:\\target"));
 
-# Why not symblic link?
+# Why not symblic link? What's the difference between symblic links and junctions?
 Java 7 supports symblic link. But symblic link can only be created for elevated user on Windows Vista/7/2008. On the other hand, I tested `scala-junction` on Windows XP and Windows 7 (elevated user and non-elevated user), and worked for all of these platform. I guess `scala-junction` works on any Windows NT.
 
 There is a function that create junction when it is failed to create symbolic link:
