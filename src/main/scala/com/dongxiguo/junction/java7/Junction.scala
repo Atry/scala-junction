@@ -37,6 +37,9 @@ object Junction {
     return link
   }
 
+  /**
+   * Creates a symbolic link. But if failed, create a junction point instead.
+   */
   def createSymbolicLinkOrJunction(link: Path, target: Path,
                                    attributes: FileAttribute[_]*): Path = {
       try {
