@@ -1,0 +1,1 @@
+Index.PACKAGES = {"com" : [], "com.dongxiguo" : [], "com.dongxiguo.junction" : [{"object" : "com\/dongxiguo\/junction\/Junction$.html", "name" : "com.dongxiguo.junction.Junction"}], "com.dongxiguo.junction.java7" : [{"object" : "com\/dongxiguo\/junction\/java7\/Junction$.html", "name" : "com.dongxiguo.junction.java7.Junction"}]};
