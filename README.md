@@ -6,7 +6,7 @@ If you use sbt, add following lines to you `build.sbt`:
 	
 	libraryDependencies += "com.dongxiguo" %% "scala-junction" % "0.1-SNAPSHOT"
 
-The [API](http://atry.github.com/scala-junction/api/index.html) of `scala-junction` is quite simple. There is only three public static functions to create junctions:
+The [API](http://atry.github.com/scala-junction/api/index.html) of `scala-junction` is quite simple. There is only three public static functions:
 
 	com.dongxiguo.junction.Junction.createJunction(new java.io.File("my-link"), new java.io.File("D:\\target"));
 	
