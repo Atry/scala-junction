@@ -13,7 +13,7 @@ The [API](http://atry.github.com/scala-junction/api/index.html) of `scala-juncti
 	// Or if you are using Java 7:
 	com.dongxiguo.junction.java7.Junction.createJunction(java.nio.file.Path.get("my-link"), java.nio.file.Paths.get("D:\\target"));
 	
-	// If you want create junction only if failed to create a symblic link:
+	// Create junction only if failed to create a symblic link:
 	com.dongxiguo.junction.java7.Junction.createSymbolicLinkOrJunction(java.nio.file.Path.get("my-link"), java.nio.file.Paths.get("D:\\target"));
 
 # Why not symblic link? What's the difference between symblic links and junctions?
