@@ -17,4 +17,4 @@ The [API](http://atry.github.com/scala-junction/api/index.html) of `scala-juncti
 	com.dongxiguo.junction.java7.Junction.createSymbolicLinkOrJunction(java.nio.file.Path.get("my-link"), java.nio.file.Paths.get("D:\\target"));
 
 # Why not symblic link? What's the difference between symblic links and junctions?
-Java 7 supports symblic link. But symblic link can only be created for elevated user on Windows Vista/7/2008. On the other hand, I tested `scala-junction` on Windows XP and Windows 7 (elevated user and non-elevated user), and worked for all of these platform. I guess `scala-junction` works on any Windows NT.
+Java 7 supports symblic link. But symblic link can only be created by elevated user on Windows Vista/7/2008. On the other hand, I tested `scala-junction` on Windows XP and Windows 7 (elevated user and non-elevated user), and worked for all of these platform. I guess `scala-junction` works on any Windows NT.
