@@ -2,8 +2,6 @@
 # How to use it?
 If you use sbt, add following lines to you `build.sbt`:
 
-	resolvers += "scala-junction-repo" at "http://atry.github.com/scala-junction/maven"
-	
 	libraryDependencies += "com.dongxiguo" %% "scala-junction" % "0.1-SNAPSHOT"
 
 The [API](http://atry.github.com/scala-junction/api/index.html) of `scala-junction` is quite simple. There is only three public static functions:
