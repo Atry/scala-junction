@@ -2,7 +2,7 @@
 # How to use it?
 If you use sbt, add following lines to you `build.sbt`:
 
-	libraryDependencies += "com.dongxiguo" %% "scala-junction" % "0.1-SNAPSHOT"
+	libraryDependencies += "com.dongxiguo" %% "scala-junction" % "0.1.0"
 
 The [API](http://atry.github.com/scala-junction/api/index.html) of `scala-junction` is quite simple. There is only three public static functions:
 
