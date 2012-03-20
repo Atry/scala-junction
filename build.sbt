@@ -2,7 +2,7 @@ name := "scala-junction"
 
 organization := "com.dongxiguo"
 
-version := "0.1-SNAPSHOT"
+version := "0.1.0"
 
 libraryDependencies += "net.java.dev.jna" % "platform" % "3.4.0"
 
