@@ -2,7 +2,7 @@ import sbt._
 import Keys._
 
 object PluginBuild extends Build {
-  // xsbt-gpg-plugin 0.4 is the last version compatible with 0.12
+  // xsbt-gpg-plugin 0.4 is the last version compatible with sbt 0.12
   lazy val xsbtGpgPlugin =
     RootProject(uri("git://github.com/sbt/xsbt-gpg-plugin.git#0.4"))
 
